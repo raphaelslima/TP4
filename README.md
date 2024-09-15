@@ -5,6 +5,7 @@
 Raphaelde Sousa Lima
 
 Raphael Abade Rodrigues
+Fabian Cézar Bernardes
 
 ## Tarefas:
 
@@ -14,5 +15,7 @@ Raphael de Sousa Lima: Criar algortimo que percorre a estrutura de dados de uma 
 
 Raphael Abade Rodrigues: Criar o algoritmo de percorrer seguidamente os 2 arquivos .txt e junto com João Pedro
 criar a árvore com as palavras em ordem alfabética e tratadas. Também criei limpar()
+
+Fabian Bernardes: Criação da classe LeitorDeArquivos para uma melhor organização do codigo e separando as funções de ler e percorrer os arquivos das funções de chamadas e execuções de funções e métodos.
 
 ## Resultados:
