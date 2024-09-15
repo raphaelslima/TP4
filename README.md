@@ -4,6 +4,8 @@
 
 Raphael de Sousa Lima
 
+Délio Henrique França de Lacerda
+
 Raphael Abade Rodrigues
 
 Fabian Cézar Bernardes
