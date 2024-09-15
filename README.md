@@ -5,8 +5,11 @@
 Raphael de Sousa Lima
 
 Raphael Abade Rodrigues
+
 Fabian Cézar Bernardes
+
 Nathan Cunha Siqueira
+
 João Pedro Silva Santos
 
 ## Tarefas:
