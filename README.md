@@ -6,10 +6,11 @@ Raphaelde Sousa Lima
 
 Raphael Abade Rodrigues
 Fabian Cézar Bernardes
+Nathan Cunha Siqueira
 
 ## Tarefas:
 
-Délio Henrique França de Lacerda: Formatar e salvar em um array a linha lida (pegar cada palavra, retirar os acentos, colocar em minúsculo e ignorar palavras com menos de 3 letras)
+Délio Henrique França de Lacerda, Nathan Siqueira: Formatar e salvar em um array a linha lida (pegar cada palavra, retirar os acentos, colocar em minúsculo e ignorar palavras com menos de 3 letras)
 
 Raphael de Sousa Lima: Criar algortimo que percorre a estrutura de dados de uma árvore e auxílio no método de inserção das palavras na árvore.
 
