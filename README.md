@@ -21,7 +21,7 @@ Délio Henrique França de Lacerda, Nathan Siqueira e Pedro Henrique de Ávila V
 Raphael de Sousa Lima: Criar algortimo que percorre a estrutura de dados de uma árvore e auxílio no método de inserção das palavras na árvore.
 
 Raphael Abade Rodrigues: Criar o algoritmo de percorrer seguidamente os 2 arquivos .txt e junto com João Pedro
-criar a árvore com as palavras em ordem alfabética e tratadas. Também criou limpar().
+criar a árvore com as palavras em ordem alfabética e tratadas. Também criou limpar() e método para criar arquivo do resultado.
 
 João Pedro Silva Santos: Criar o método de inserção na árvore e criar o método para guardar e imprimir quais linhas as palavras aparecem.
 
