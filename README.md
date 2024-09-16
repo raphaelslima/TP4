@@ -28,5 +28,3 @@ João Pedro Silva Santos: Criar o método de inserção na árvore e criar o mé
 Pedro Henrique de Ávila: Criação e implementação dos métodos: ArvoreBinariaDePesquisa, Nodo e principal ( formartar e salvar em uma arrayList a linha lida, sendo tiirar os acentos de cada palavra, colocar em padrão minúsculo, eliminar as palavras com menos de três letras. Imprimir o resultado e ler o arquivo ).
 
 Fabian Bernardes: Criação da classe LeitorDeArquivos para uma melhor organização do codigo e separando as funções de ler e percorrer os arquivos das funções de chamadas e execuções de funções e métodos.
-
-## Resultados:
