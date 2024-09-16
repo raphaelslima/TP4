@@ -1,6 +1,5 @@
 import java.io.*;
 import java.text.Normalizer;
-import java.util.List;
 
 public class LeitorDeArquivos {
 
@@ -23,10 +22,18 @@ public class LeitorDeArquivos {
                 System.out.println("=========================================\n");
                 System.out.println("Arquivo " + file.getName() + "\n");
 
-                processarArquivo(file); // Processa cada arquivo individualmente
+                // Cria um arquivo de saída específico para cada arquivo processado
+                File arquivoResultado = new File("resultado_" + file.getName() + ".txt");
 
-                // Imprimir as palavras em ordem alfabética
-                arvore.emOrdem();
+                // Processa cada arquivo individualmente
+                processarArquivo(file, arquivoResultado);
+
+                // Escrever as palavras em ordem alfabética no arquivo de saída
+                try (BufferedWriter escritor = new BufferedWriter(new FileWriter(arquivoResultado, true))) {
+                    arvore.emOrdem(escritor); // Aqui a árvore escreve no arquivo
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
 
                 // Limpar a árvore para o próximo arquivo
                 arvore.limpar();
@@ -37,8 +44,9 @@ public class LeitorDeArquivos {
     }
 
     // Método para processar um único arquivo
-    private void processarArquivo(File file) {
-        try (BufferedReader leitor = new BufferedReader(new FileReader(file))) {
+    private void processarArquivo(File file, File arquivoResultado) {
+        try (BufferedReader leitor = new BufferedReader(new FileReader(file));
+            BufferedWriter escritor = new BufferedWriter(new FileWriter(arquivoResultado))) {
             String linha;
             int numeroLinha = 1;
 

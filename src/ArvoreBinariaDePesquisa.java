@@ -1,6 +1,6 @@
+import java.io.*;
 
-
-public class ArvoreBinariaDePesquisa{
+public class ArvoreBinariaDePesquisa {
     // Raiz da árvore
     Nodo raiz;
 
@@ -16,12 +16,10 @@ public class ArvoreBinariaDePesquisa{
 
     // Função inserir recursiva
     private Nodo inserirRecursivo(Nodo atual, String palavra, int linha) {
-        // Se o nó atual for nulo, cria um novo nó
         if (atual == null) {
             return new Nodo(palavra, linha);
         }
 
-        // Compara a palavra e insere recursivamente à esquerda ou à direita
         if (palavra.compareTo(atual.palavra) < 0) {
             atual.esquerda = inserirRecursivo(atual.esquerda, palavra, linha);
         } else if (palavra.compareTo(atual.palavra) > 0) {
@@ -30,25 +28,26 @@ public class ArvoreBinariaDePesquisa{
             atual.adicionarLinha(linha);
         }
 
-        // Retorna a palavra atual
         return atual;
     }
 
-    //Percorre a árvore em ordem alfabetica
-    public void emOrdem() {
-        emOrdemRecursivo(this.raiz);
+    // Percorre a árvore em ordem alfabética e grava no arquivo
+    public void emOrdem(BufferedWriter escritor) throws IOException {
+        emOrdemRecursivo(this.raiz, escritor);
     }
 
-    // Função recursiva que percorre a árvore de forma recursiva
-    private void emOrdemRecursivo(Nodo atual) {
+    // Função recursiva que percorre a árvore e grava as palavras e as linhas no arquivo
+    private void emOrdemRecursivo(Nodo atual, BufferedWriter escritor) throws IOException {
         if (atual != null) {
-            emOrdemRecursivo(atual.esquerda); // Percorre a esquerda
-            atual.imprimePalavra(); // Exibe o valor do nó atual
-            emOrdemRecursivo(atual.direita); // Percorre a direita
+            emOrdemRecursivo(atual.esquerda, escritor);
+            escritor.write(atual.palavra +" "+ atual.linhas);
+            escritor.newLine();
+            System.out.println(atual.palavra + " " + atual.linhas);
+            emOrdemRecursivo(atual.direita, escritor);
         }
     }
 
     public void limpar() {
-        raiz = null; // anula a raiz e o collector garbage reseta
+        raiz = null; // anula a raiz e o garbage collector cuida do resto
     }
 }
